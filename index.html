@@ -308,7 +308,7 @@ body::before{
 .section-sub{
   font-size:16px;color:var(--texto-suave);
   line-height:1.6;max-width:560px;margin:0 auto;
-}
+;text-align:justify;-webkit-hyphens:auto;hyphens:auto}
 
 /* ===== O QUE VOCÊ RECEBE ===== */
 .benefits{display:grid;grid-template-columns:1fr;gap:10px;max-width:440px;margin:0 auto}
@@ -418,9 +418,9 @@ body::before{
 .check-desc{
   font-size:12.5px;color:var(--texto-suave);
   line-height:1.45;
-}
+;text-align:justify;-webkit-hyphens:auto;hyphens:auto}
 .curadoria-end{
-  text-align:center;
+  text-align:justify;
   max-width:580px;margin:4px auto 8px;
   font-size:16px;color:var(--texto);
   line-height:1.6;
@@ -434,11 +434,12 @@ body::before{
 
 /* ===== LEDE DA TESE (POR QUE PORTO BELO) ===== */
 .why-lede{
-  text-align:left;
+  text-align:justify;
+  -webkit-hyphens:auto;hyphens:auto;
   max-width:680px;
   margin:0 auto 20px;
   font-size:16.5px;
-  line-height:1.7;
+  line-height:1.75;
   color:var(--texto);
   font-weight:400;
 }
@@ -487,6 +488,7 @@ body::before{
   padding:14px;
   font-size:13px;color:var(--texto);
   line-height:1.6;
+  margin-bottom:10px;
 }
 .wp-msg .wp-line{
   display:flex;gap:8px;
@@ -508,7 +510,7 @@ body::before{
 }
 .wp-foot{
   text-align:center;font-size:12px;color:var(--texto-muted);
-  max-width:440px;margin:0 auto 18px;
+  max-width:440px;margin:14px auto 18px;
   line-height:1.5;
 }
 .wp-foot-strong{
@@ -583,7 +585,7 @@ body::before{
   font-size:14.5px;color:var(--texto-suave);
   line-height:1.65;
   margin:0;
-}
+;text-align:justify;-webkit-hyphens:auto;hyphens:auto}
 .about-bio b{color:var(--amarelo);font-weight:700}
 .about-bio strong{color:var(--amarelo);font-weight:700}
 
@@ -712,6 +714,174 @@ body::before{
 .cta-label{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;text-align:center;line-height:1.15;min-width:0}
 .cta-line-1{font-size:16px;font-weight:800;letter-spacing:.1px;display:block}
 .cta-line-2{font-size:11.5px;font-weight:500;opacity:.9;display:block;margin-top:2px;letter-spacing:.3px}
+
+/* ===== HERO AUTHORITY (foto grande + cartão azul) ===== */
+.hero-authority{
+  position:relative;
+  margin:22px auto 8px;
+  max-width:480px;
+  padding-top:54px;
+  text-align:center;
+}
+.hero-avatar-wrap{
+  position:absolute;
+  top:0;left:50%;
+  transform:translateX(-50%);
+  z-index:2;
+  width:162px;height:162px;
+  border-radius:50%;
+  background:#0a1a2e;
+  padding:4px;
+  box-shadow:
+    0 0 0 4px #1877F2,
+    0 0 0 9px rgba(24,119,242,.25),
+    0 0 50px 6px rgba(24,119,242,.45),
+    0 12px 32px rgba(0,0,0,.55);
+}
+.hero-avatar{
+  width:100%;height:100%;
+  border-radius:50%;
+  display:block;
+  object-fit:cover;
+  border:2px solid rgba(255,255,255,.10);
+}
+.hero-authority-card{padding:138px 26px 24px;background:rgba(24,119,242,.08);border:1px solid rgba(24,119,242,.18);border-radius:18px;text-align:center}
+.hero-authority-name{
+  font-family:'Sora',sans-serif;
+  font-weight:800;
+  font-size:20px;
+  color:var(--texto);
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  margin-bottom:6px;
+  flex-wrap:wrap;
+}
+.hero-authority-name .meta-seal{
+  width:16px;height:16px;
+  display:inline-block;
+  vertical-align:middle;
+  margin-left:2px;
+}
+.hero-authority-role{
+  font-size:13px;
+  color:var(--texto-suave);
+  line-height:1.45;
+  margin-bottom:8px;
+}
+.hero-authority-role b{
+  color:var(--amarelo);
+  font-weight:700;
+}
+.hero-authority-foot{
+  font-size:12px;
+  color:var(--texto-suave);
+  line-height:1.4;
+  opacity:.85;
+  padding-top:8px;
+  border-top:1px solid rgba(24,119,242,.18);
+  margin-top:6px;
+}
+@media (min-width:540px){
+  .hero-authority{max-width:520px}
+  .hero-authority-name{font-size:22px}
+  .hero-authority-role{font-size:14px}
+  .hero-avatar-wrap{width:236px;height:236px}
+  .hero-authority-card{padding:200px 32px 28px}
+}
+
+
+/* ===== FALE DIRETAMENTE (botão roxo com LED pulsante) ===== */
+.fale-direto-wrap{
+  position:relative;
+  margin:48px auto 56px;
+  padding:0 16px;
+  max-width:640px;
+}
+.fale-direto-inner{
+  position:relative;
+  background:linear-gradient(135deg,rgba(124,58,237,.08),rgba(168,85,247,.04));
+  border:1px solid rgba(168,85,247,.28);
+  border-radius:18px;
+  padding:22px 22px 24px;
+  text-align:center;
+  overflow:hidden;
+}
+.fale-direto-inner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(168,85,247,.10),transparent 60%),
+    radial-gradient(ellipse at 50% 100%,rgba(124,58,237,.08),transparent 60%);
+  pointer-events:none;
+}
+.fale-direto-eyebrow{
+  font-family:'Sora',sans-serif;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:#C4A6FF;
+  margin-bottom:8px;
+  position:relative;
+}
+.fale-direto-text{
+  font-size:14.5px;
+  line-height:1.55;
+  color:var(--texto-suave);
+  margin-bottom:18px;
+  max-width:480px;
+  margin-left:auto;margin-right:auto;
+  position:relative;
+}
+
+/* LED pulsante atrás do botão roxo */
+.cta-purple{
+  position:relative;
+  background:linear-gradient(135deg,#7C3AED 0%,#A855F7 100%) !important;
+  color:#fff !important;
+  border:1px solid rgba(168,85,247,.55) !important;
+  box-shadow:0 8px 24px rgba(124,58,237,.35),inset 0 1px 0 rgba(255,255,255,.18);
+  animation:ledPulse 2.2s ease-in-out infinite;
+  z-index:1;
+}
+.cta-purple::before{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:14px;
+  background:linear-gradient(135deg,rgba(124,58,237,.55),rgba(168,85,247,.45));
+  filter:blur(14px);
+  opacity:.6;
+  z-index:-1;
+  animation:ledGlow 2.2s ease-in-out infinite;
+  pointer-events:none;
+}.cta-purple:hover{
+  transform:translateY(-1px);
+  box-shadow:0 12px 30px rgba(124,58,237,.45),inset 0 1px 0 rgba(255,255,255,.22);
+}
+.cta-purple .cta-line-1{color:#fff !important}
+.cta-purple .cta-line-2{color:rgba(255,255,255,.78) !important;font-weight:500}
+.cta-purple svg{color:#fff}
+
+@keyframes ledPulse{
+  0%,100%{transform:scale(1);box-shadow:0 8px 24px rgba(124,58,237,.35),inset 0 1px 0 rgba(255,255,255,.18)}
+  50%{transform:scale(1.012);box-shadow:0 12px 32px rgba(168,85,247,.55),inset 0 1px 0 rgba(255,255,255,.22)}
+}
+@keyframes ledGlow{
+  0%,100%{opacity:.45}
+  50%{opacity:.85}
+  50%{opacity:1;transform:translate(-50%,-50%) scale(1.3)}
+}
+
+.fale-direto-note{
+  font-size:11.5px;
+  color:var(--texto-suave);
+  opacity:.7;
+  margin-top:14px;
+  position:relative;
+  letter-spacing:.01em;
+}
+
 </style>
 </head>
 <body>
@@ -723,7 +893,26 @@ body::before{
       <span class="pill"><span class="dot"></span>Grupo gratuito · Entrada aberta</span>
     </div>
 
-    <h1>
+    
+    <!-- autoridade: foto grande + cartão azul -->
+    <div class="hero-authority">
+      <div class="hero-avatar-wrap">
+        <img src="pessoa-512.webp" alt="Luigi Bolfer" class="hero-avatar">
+      </div>
+      <div class="hero-authority-card">
+        <div class="hero-authority-name">
+          Luigi Bolfer<img src="verificado_instagram.webp" alt="Verificado" class="meta-seal">
+        </div>
+        <div class="hero-authority-role">
+          <b>Consultor Imobiliário</b> · <b>Novo Imobiliário</b>
+        </div>
+        <div class="hero-authority-foot">
+          Curadoria de oportunidades no litoral norte de SC
+        </div>
+      </div>
+    </div>
+
+    <h1 style="margin-top:36px">
       O <span class="hl">litoral de SC</span> está mudando rápido.<br>
       Entre no radar antes de decidir onde investir.
     </h1>
@@ -734,23 +923,6 @@ body::before{
     <p class="hero-sub hero-sub-2">
       Lançamentos, condições comerciais, análises de localização e pontos de atenção antes da decisão.
     </p>
-
-    <!-- autoridade -->
-    <div class="authority">
-      <div class="avatar-wrap">
-        <img src="pessoa-512.webp" alt="Luigi Bolfer" class="avatar">
-        
-      </div>
-      <div class="authority-text">
-        <div class="authority-name">
-          Luigi Bolfer<img src="verificado_instagram.webp" alt="Verificado" class="meta-seal">
-        </div>
-        <div class="authority-role">
-          Consultor imobiliário · <b>Novo Imobiliário</b><br>
-          Litoral norte de Santa Catarina
-        </div>
-      </div>
-    </div>
 
     <!-- stats de mercado (mantidos conforme decisão #2) -->
     <div class="stats">
@@ -771,7 +943,7 @@ body::before{
 
     <!-- CTA principal -->
     <div class="cta-wrap">
-      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="hero" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar gratuitamente no grupo</strong><small class="cta-line-2">(Radar Litoral SC | Imóveis)</small></span><span class="cta-arrow">→</span>
+      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="hero" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span>
       </a>
       <p class="cta-sub">Abre direto no WhatsApp · sem custo · sem obrigação de compra</p>
     </div>
@@ -779,6 +951,111 @@ body::before{
     <div class="free-banner">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
       100% gratuito · sem pegadinha · você pode sair quando quiser
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA NA PRÁTICA -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Como funciona na prática</span>
+      <h2 class="section-title">Você recebe oportunidades em um formato simples de entender.</h2>
+      <p class="section-sub">Nada de informação solta. A ideia é enviar contexto para você avaliar melhor antes de avançar.</p>
+    </div>
+
+    <div class="wp-card reveal">
+      <div class="wp-head">
+        <span class="avatar-wrap"><img src="pessoa-512.webp" alt="Luigi Bolfer" class="wp-avatar"></span>
+        <div>
+          <div class="wp-name">Radar Litoral SC | Imóveis</div>
+          <div class="wp-tag">Oportunidade em análise</div>
+        </div>
+      </div>
+
+      <div class="wp-msg">
+        <b>Empreendimento:</b> [Nome]<br>
+        <b>Cidade:</b> Porto Belo/SC<br>
+        <b>Região:</b> [bairro/localização]<br>
+        <b>Tipologia:</b> 2 suítes · 1 vaga<br>
+        <b>Entrada:</b> [condição]
+      </div>
+      <div class="wp-msg">
+        <b>Ponto forte:</b> fluxo facilitado durante obra e boa localização na região em expansão.
+      </div>
+      <div class="wp-msg">
+        <b>Ponto de atenção:</b> comparar preço por m² com produtos similares da região.
+      </div>
+      <div class="wp-msg">
+        <b>Minha leitura:</b> oportunidade interessante para quem busca exposição ao litoral norte de SC, desde que a condição final mantenha coerência com a tabela atual e com o objetivo do comprador.
+      </div>
+      <div class="wp-foot">📩 Enviado no Radar Litoral SC</div>
+    </div>
+
+    <p class="wp-foot-strong reveal">Você não precisa entender tudo sozinho. A curadoria ajuda você a olhar os pontos certos antes de avançar.</p>
+
+    <div class="cta-wrap reveal" style="margin-top:22px">
+      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="exemplo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM CONDUZ O RADAR -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Quem conduz o radar</span>
+      <h2 class="section-title">Curadoria feita por quem olha imóvel com <span class="hl">visão técnica e comercial</span>.</h2>
+    </div>
+
+    <div class="about-block reveal">
+      <span class="avatar-wrap"><img src="pessoa-512.webp" alt="Luigi Bolfer" class="avatar" style="width:84px;height:84px"></span>
+      <div class="about-text">
+        <div class="about-name">
+        Luigi Bolfer<img src="verificado_instagram.webp" alt="Verificado" class="meta-seal"></div>
+        <div class="authority-role" style="margin-top:4px;margin-bottom:10px">
+          <b>Consultor Imobiliário · Novo Imobiliário</b>
+        </div>
+        <p class="about-bio">Arquiteto por formação, atuei por anos dentro do <b>núcleo de engenharia da FG Empreendimentos</b> — de perto das principais obras e do alto padrão da região. Depois veio <b>1 ano na Dallo, em Itapema</b>, antes de migrar com tudo para o mercado imobiliário. Era o que eu queria fazer pelo resto da vida.</p>
+        <p class="about-bio" style="margin-top:10px">Hoje, com a estrutura do <b>Novo Imobiliário</b> e mais de <b>650 corretores como rede</b>, faço curadoria de oportunidades no litoral norte de SC. <b>Casado, pai de uma filha</b>, levo para dentro do Radar a mesma seriedade que aprendi em obra — mas com a leitura de quem decide na ponta, junto com o cliente.</p>
+      </div>
+    </div>
+
+    <div class="cta-wrap cta-wrap-section reveal" style="margin-top:28px">
+      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta cta-group" data-cta="quem-conduz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SEM PRESSÃO -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Sem pressão</span>
+      <h2 class="section-title">Entrar no grupo <span class="hl">não significa comprar</span> um imóvel.</h2>
+      <p class="section-sub">Você entra gratuitamente, acompanha as oportunidades e decide se alguma faz sentido para o seu momento. Se quiser apenas observar o mercado, tudo bem. Se alguma oportunidade fizer sentido, você pode chamar no privado e pedir mais detalhes.</p>
+    </div>
+
+    <div class="no-pressure reveal">
+      <div class="np-card">
+        <div class="np-icon">💸</div>
+        <div class="np-title">Sem custo</div>
+        <p class="np-desc">Você não paga para entrar.</p>
+      </div>
+      <div class="np-card">
+        <div class="np-icon">🤝</div>
+        <div class="np-title">Sem obrigação</div>
+        <p class="np-desc">Você não precisa comprar nada.</p>
+      </div>
+      <div class="np-card">
+        <div class="np-icon">🔕</div>
+        <div class="np-title">Sem spam</div>
+        <p class="np-desc">A ideia é curadoria, não excesso de mensagem.</p>
+      </div>
+    </div>
+
+    <div class="cta-wrap cta-wrap-section reveal" style="margin-top:28px">
+      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta cta-group" data-cta="sem-pressao" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -839,7 +1116,7 @@ body::before{
 
     <div class="cta-wrap reveal" style="margin-top:30px">
       <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="beneficios" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar gratuitamente no grupo</strong><small class="cta-line-2">(Radar Litoral SC | Imóveis)</small></span><span class="cta-arrow">→</span></a>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span></a>
       <p class="cta-sub">Você entra para acompanhar. Comprar ou não comprar é uma decisão sua.</p>
     </div>
   </div>
@@ -849,7 +1126,7 @@ body::before{
 <section class="section why-section">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-eyebrow">Tese principal</span>
+      <span class="section-eyebrow">Por que essa região</span>
       <h2 class="section-title">Por que <span class="hl">Porto Belo</span> entrou no radar dos investidores do litoral?</h2>
     </div>
 
@@ -897,7 +1174,7 @@ body::before{
     <p class="transition-line reveal">O Radar Litoral SC existe para acompanhar essas janelas sem transformar qualquer lançamento em "oportunidade".</p>
 
     <div class="cta-wrap reveal">
-      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="tese" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar gratuitamente no grupo</strong><small class="cta-line-2">(Radar Litoral SC | Imóveis)</small></span><span class="cta-arrow">→</span></a>
+      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="tese" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -964,6 +1241,10 @@ body::before{
         </div>
       </div>
     </div>
+
+    <div class="cta-wrap cta-wrap-section reveal" style="margin-top:28px">
+      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta cta-group" data-cta="estrutura" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span></a>
+    </div>
   </div>
 </section>
 
@@ -1022,102 +1303,9 @@ body::before{
     </div>
 
     <p class="curadoria-end reveal"><strong>Nem toda oportunidade entra no radar.</strong> Quando algo não faz sentido, é melhor deixar passar do que colocar alguém em uma decisão ruim.</p>
-  </div>
-</section>
 
-<!-- COMO FUNCIONA NA PRÁTICA -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">Como funciona na prática</span>
-      <h2 class="section-title">Você recebe oportunidades em um formato simples de entender.</h2>
-      <p class="section-sub">Nada de informação solta. A ideia é enviar contexto para você avaliar melhor antes de avançar.</p>
-    </div>
-
-    <div class="wp-card reveal">
-      <div class="wp-head">
-        <span class="avatar-wrap"><img src="pessoa-512.webp" alt="Luigi Bolfer" class="wp-avatar"></span>
-        <div>
-          <div class="wp-name">Radar Litoral SC | Imóveis</div>
-          <div class="wp-tag">Oportunidade em análise</div>
-        </div>
-      </div>
-
-      <div class="wp-msg">
-        <b>Empreendimento:</b> [Nome]<br>
-        <b>Cidade:</b> Porto Belo/SC<br>
-        <b>Região:</b> [bairro/localização]<br>
-        <b>Tipologia:</b> 2 suítes · 1 vaga<br>
-        <b>Entrada:</b> [condição]
-      </div>
-      <div class="wp-msg">
-        <b>Ponto forte:</b> fluxo facilitado durante obra e boa localização na região em expansão.
-      </div>
-      <div class="wp-msg">
-        <b>Ponto de atenção:</b> comparar preço por m² com produtos similares da região.
-      </div>
-      <div class="wp-msg">
-        <b>Minha leitura:</b> oportunidade interessante para quem busca exposição ao litoral norte de SC, desde que a condição final mantenha coerência com a tabela atual e com o objetivo do comprador.
-      </div>
-      <div class="wp-foot">📩 Enviado no Radar Litoral SC</div>
-    </div>
-
-    <p class="wp-foot-strong reveal">Você não precisa entender tudo sozinho. A curadoria ajuda você a olhar os pontos certos antes de avançar.</p>
-
-    <div class="cta-wrap reveal" style="margin-top:22px">
-      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="exemplo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar gratuitamente no grupo</strong><small class="cta-line-2">(Radar Litoral SC | Imóveis)</small></span><span class="cta-arrow">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- QUEM CONDUZ O RADAR -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">Quem conduz o radar</span>
-      <h2 class="section-title">Curadoria feita por quem olha imóvel com <span class="hl">visão técnica e comercial</span>.</h2>
-    </div>
-
-    <div class="about-block reveal">
-      <span class="avatar-wrap"><img src="pessoa-512.webp" alt="Luigi Bolfer" class="avatar" style="width:84px;height:84px"></span>
-      <div class="about-text">
-        <div class="about-name">
-        Luigi Bolfer<img src="verificado_instagram.webp" alt="Verificado" class="meta-seal"></div>
-        <div class="authority-role" style="margin-top:4px;margin-bottom:10px">
-          <b>Consultor Imobiliário · Novo Imobiliário</b>
-        </div>
-        <p class="about-bio">Arquiteto por formação, atuei por anos dentro do <b>núcleo de engenharia da FG Empreendimentos</b> — de perto das principais obras e do alto padrão da região. Depois veio <b>1 ano na Dallo, em Itapema</b>, antes de migrar com tudo para o mercado imobiliário. Era o que eu queria fazer pelo resto da vida.</p>
-        <p class="about-bio" style="margin-top:10px">Hoje, com a estrutura do <b>Novo Imobiliário</b> e mais de <b>650 corretores como rede</b>, faço curadoria de oportunidades no litoral norte de SC. <b>Casado, pai de uma filha</b>, levo para dentro do Radar a mesma seriedade que aprendi em obra — mas com a leitura de quem decide na ponta, junto com o cliente.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SEM PRESSÃO -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">Sem pressão</span>
-      <h2 class="section-title">Entrar no grupo <span class="hl">não significa comprar</span> um imóvel.</h2>
-      <p class="section-sub">Você entra gratuitamente, acompanha as oportunidades e decide se alguma faz sentido para o seu momento. Se quiser apenas observar o mercado, tudo bem. Se alguma oportunidade fizer sentido, você pode chamar no privado e pedir mais detalhes.</p>
-    </div>
-
-    <div class="no-pressure reveal">
-      <div class="np-card">
-        <div class="np-icon">💸</div>
-        <div class="np-title">Sem custo</div>
-        <p class="np-desc">Você não paga para entrar.</p>
-      </div>
-      <div class="np-card">
-        <div class="np-icon">🤝</div>
-        <div class="np-title">Sem obrigação</div>
-        <p class="np-desc">Você não precisa comprar nada.</p>
-      </div>
-      <div class="np-card">
-        <div class="np-icon">🔕</div>
-        <div class="np-title">Sem spam</div>
-        <p class="np-desc">A ideia é curadoria, não excesso de mensagem.</p>
-      </div>
+    <div class="cta-wrap cta-wrap-section reveal" style="margin-top:24px">
+      <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta cta-group" data-cta="curadoria" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -1175,7 +1363,7 @@ body::before{
       <p class="section-sub" style="margin-bottom:24px">Entre gratuitamente no Radar Litoral SC e acompanhe oportunidades imobiliárias, lançamentos e análises antes de tomar sua decisão.<br><br>Você não precisa comprar nada agora. Só precisa acompanhar melhor.</p>
 
       <div class="cta-wrap">
-        <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="final" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar gratuitamente no grupo</strong><small class="cta-line-2">(Radar Litoral SC | Imóveis)</small></span><span class="cta-arrow">→</span>
+        <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="final" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span>
         </a>
       </div>
 
@@ -1187,10 +1375,25 @@ body::before{
   </div>
 </section>
 
+
+<!-- FALE DIRETAMENTE COM O LUIGI (CTA secundário, cor diferente) -->
+<div class="fale-direto-wrap reveal">
+  <div class="fale-direto-inner">
+    <div class="fale-direto-eyebrow">Já quer conversar sobre um imóvel?</div>
+    <div class="fale-direto-text">Fale diretamente com o Luigi no WhatsApp — atendimento consultivo, sem passar pelo grupo.</div>
+    <a href="https://wa.me/5547999389858?text=Ol%C3%A1%2C%20Luigi.%20Quero%20entender%20oportunidades%20imobili%C3%A1rias%20no%20litoral%20de%20SC.%20Podemos%20marcar%20uma%20liga%C3%A7%C3%A3o%20para%20me%20ajudar%20a%20avaliar%20o%20que%20faz%20sentido%20para%20o%20meu%20perfil%3F" class="cta cta-purple" data-cta="fale-direto" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span class="cta-label"><strong class="cta-line-1">Fale diretamente com o Luigi</strong><small class="cta-line-2">Atendimento consultivo · sem compromisso</small></span>
+      <span class="cta-arrow">→</span>
+    </a>
+    <div class="fale-direto-note">Resposta em horário comercial · sem fila · sem robô</div>
+  </div>
+</div>
+
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta" id="stickyCta">
   <a href="https://chat.whatsapp.com/FRCgzvZiS4s0n6tGxKKOin" class="cta" data-cta="sticky" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar gratuitamente no grupo</strong><small class="cta-line-2">(Radar Litoral SC | Imóveis)</small></span><span class="cta-arrow">→</span></a>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="cta-label"><strong class="cta-line-1">Entrar Gratuitamente No Grupo</strong><small class="cta-line-2">(Radar Litoral SC - Imóveis)</small></span><span class="cta-arrow">→</span></a>
 </div>
 
 <script>
