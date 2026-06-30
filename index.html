@@ -179,15 +179,7 @@ body::before{
   border:2px solid var(--azul-meta);
   padding:2px;background:var(--preto);
 }
-.meta-badge{
-  position:absolute;bottom:-2px;right:-2px;
-  width:20px;height:20px;
-  background:var(--azul-meta);
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  border:2px solid var(--preto);
-}
-.meta-badge svg{width:11px;height:11px;fill:#fff}
+
 .authority-text{flex:1;min-width:0}
 .authority-name{
   font-family:'Sora',sans-serif;font-weight:700;font-size:14.5px;
@@ -694,51 +686,28 @@ body::before{
   margin:0 auto;max-width:440px;
 }
 
-/* ===== SELO VERIFICADO (imagem real verificado_instagram.png) ===== */
+/* ===== SELO VERIFICADO (imagem real verificado_instagram.webp) ===== */
 .meta-seal{
   display:inline-block;
-  width:18px;height:18px;
-  background:url("verificado_instagram.png") center/contain no-repeat;
+  width:16px;height:16px;
+  background:url("verificado_instagram.webp") center/contain no-repeat;
   vertical-align:middle;
-  margin-left:6px;
+  margin-left:3px;
   flex-shrink:0;
 }
 .meta-seal-mini{
   display:inline-block;
-  width:14px;height:14px;
-  background:url("verificado_instagram.png") center/contain no-repeat;
+  width:12px;height:12px;
+  background:url("verificado_instagram.webp") center/contain no-repeat;
   vertical-align:middle;
-  margin-left:4px;
+  margin-left:2px;
   flex-shrink:0;
 }
 .verified{display:none !important}
 
 /* ===== SELO NO CANTO INFERIOR DIREITO DA FOTO ===== */
 .avatar-wrap{position:relative;display:inline-block;flex-shrink:0}
-.avatar-wrap .photo-seal{
-  position:absolute;
-  right:-3px;bottom:-3px;
-  width:22px;height:22px;
-  background:url("verificado_instagram.png") center/contain no-repeat;
-  border-radius:50%;
-  background-color:#0a0a0a;
-  padding:2px;
-  box-sizing:content-box;
-  pointer-events:none;
-}
 .avatar-wrap .avatar{border-radius:50%;display:block}
-.about-block > .avatar-wrap{position:relative;display:inline-block}
-.about-block .photo-seal{
-  position:absolute;
-  right:-3px;bottom:-3px;
-  width:20px;height:20px;
-  background:url("verificado_instagram.png") center/contain no-repeat;
-  border-radius:50%;
-  background-color:#0a0a0a;
-  padding:2px;
-  box-sizing:content-box;
-  pointer-events:none;
-}
 
 .cta-label{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;text-align:center;line-height:1.15;min-width:0}
 .cta-line-1{font-size:16px;font-weight:800;letter-spacing:.1px;display:block}
@@ -760,7 +729,9 @@ body::before{
     </h1>
 
     <p class="hero-sub">
-      Receba no WhatsApp uma curadoria <span class="gratis">GRATUITA</span> de oportunidades imobiliárias no litoral de Santa Catarina, com foco atual em <strong>Porto Belo, Itapema e região</strong>.<br><br>
+      Receba no <strong>WhatsApp</strong> uma curadoria <span class="gratis">GRATUITA</span> de oportunidades imobiliárias no litoral de Santa Catarina — com foco atual em <strong>Porto Belo</strong>, <strong>Itapema</strong> e região.
+    </p>
+    <p class="hero-sub hero-sub-2">
       Lançamentos, condições comerciais, análises de localização e pontos de atenção antes da decisão.
     </p>
 
@@ -768,14 +739,11 @@ body::before{
     <div class="authority">
       <div class="avatar-wrap">
         <img src="pessoa-512.webp" alt="Luigi Bolfer" class="avatar">
-        <span class="meta-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-        </span>
-        <span class="photo-seal" aria-label="Verificado"></span>
+        
       </div>
       <div class="authority-text">
         <div class="authority-name">
-          Luigi Bolfer<img src="verificado_instagram.png" alt="Verificado" class="meta-seal">
+          Luigi Bolfer<img src="verificado_instagram.webp" alt="Verificado" class="meta-seal">
         </div>
         <div class="authority-role">
           Consultor imobiliário · <b>Novo Imobiliário</b><br>
@@ -1068,7 +1036,7 @@ body::before{
 
     <div class="wp-card reveal">
       <div class="wp-head">
-        <span class="avatar-wrap"><img src="pessoa-512.webp" alt="Luigi Bolfer" class="wp-avatar"><span class="photo-seal" aria-label="Verificado"></span></span>
+        <span class="avatar-wrap"><img src="pessoa-512.webp" alt="Luigi Bolfer" class="wp-avatar"></span>
         <div>
           <div class="wp-name">Radar Litoral SC | Imóveis</div>
           <div class="wp-tag">Oportunidade em análise</div>
@@ -1076,14 +1044,14 @@ body::before{
       </div>
 
       <div class="wp-msg">
-        <b>Empreendimento:</b> [Nome do empreendimento]<br>
+        <b>Empreendimento:</b> [Nome]<br>
         <b>Cidade:</b> Porto Belo/SC<br>
         <b>Região:</b> [bairro/localização]<br>
-        <b>Tipologia:</b> [ex.: 2 suítes / 1 vaga]<br>
-        <b>Entrada:</b> [condição resumida]
+        <b>Tipologia:</b> 2 suítes · 1 vaga<br>
+        <b>Entrada:</b> [condição]
       </div>
       <div class="wp-msg">
-        <b>Ponto forte:</b> fluxo facilitado durante obra e localização em região de expansão.
+        <b>Ponto forte:</b> fluxo facilitado durante obra e boa localização na região em expansão.
       </div>
       <div class="wp-msg">
         <b>Ponto de atenção:</b> comparar preço por m² com produtos similares da região.
@@ -1111,10 +1079,10 @@ body::before{
     </div>
 
     <div class="about-block reveal">
-      <span class="avatar-wrap"><img src="pessoa-512.webp" alt="Luigi Bolfer" class="avatar" style="width:84px;height:84px"><span class="photo-seal" aria-label="Verificado"></span></span>
+      <span class="avatar-wrap"><img src="pessoa-512.webp" alt="Luigi Bolfer" class="avatar" style="width:84px;height:84px"></span>
       <div class="about-text">
         <div class="about-name">
-        Luigi Bolfer<img src="verificado_instagram.png" alt="Verificado" class="meta-seal"></div>
+        Luigi Bolfer<img src="verificado_instagram.webp" alt="Verificado" class="meta-seal"></div>
         <div class="authority-role" style="margin-top:4px;margin-bottom:10px">
           <b>Consultor Imobiliário · Novo Imobiliário</b>
         </div>
